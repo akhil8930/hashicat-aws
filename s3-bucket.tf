@@ -1,10 +1,6 @@
-module "s3_bucket" {
-  source = "terraform-aws-modules/s3-bucket/aws"
+
+module "s3-bucket" {
+  source  = "app.terraform.io/Akhil-training-1/s3-bucket/aws"
+  version = "2.8.0"
   bucket_prefix = "akhil"
-  acl    = "private"
-
-  versioning = {
-    enabled = true
-  }
-
 }
